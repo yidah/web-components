@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My first web component</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* --color-primary is a css  variable used in shadowRoot.innerHTML :host(.important)*/
+      html {
+        --color-primary: #a4fcda;
+        font-family: sans-serif;
+      }
+
+    </style>
+    <!-- 3. link my component file  -->
+    <script src="tooltip.js"></script>
+
+    <!-- Extending build-in elements -->
+    <script src="confirm-link.js"></script>
+  </head>
+  <body>
+    <!-- 4. add my component -->
+    <p>
+      <kbty-tooltip text="Web Components is a set of standards">
+        <span class="highlight">Web components</span></kbty-tooltip
+      >are awesome!
+    </p>
+    <kbty-tooltip></kbty-tooltip>
+
+    <!-- Using extending build-in elements -->
+    <a is="kbty-confirm-link" href="https://www.google.com">Google</a>
+  </body>
+</html>
